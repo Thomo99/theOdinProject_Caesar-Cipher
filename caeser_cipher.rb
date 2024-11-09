@@ -9,6 +9,7 @@ end
 def make_cipher_key()
   alpha = ('a'..'z').to_a
   numbers_plus_five = []
+  numbers = (1..26).to_a
 
   for number in numbers
     if number > 21
@@ -21,7 +22,19 @@ def make_cipher_key()
 
   return cipher_key = Hash[alpha.zip(numbers_plus_five)]
 end
+puts "What to Encrypt:"
+original_msg = gets.chomp
+og_key = make_og_key
+cipher = make_cipher_key
+cipher_a = []
 
-def get_user_input()
-  original_string = 
+original_msg.each_char do |char|
+  if char == " "
+    cipher_a.push
+  else
+    num = og_key[char]
+    cipher_msg += num.to_s
+  end
 end
+
+puts cipher_msg
