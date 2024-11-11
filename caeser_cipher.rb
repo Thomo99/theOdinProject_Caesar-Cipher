@@ -38,16 +38,7 @@ original_msg.each_char do |char|
   end
 end
 
-# cipher_a.map! do |num|
-#   if num == " "
-#     num = " "
-#   elsif num > 21
-#     num - 21
-#   else
-#     num += 5
-#   end
-# end
-print(cipher_a)
+
 encrypted_msg = ""
 
 for num in cipher_a
